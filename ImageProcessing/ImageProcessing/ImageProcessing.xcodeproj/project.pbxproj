@@ -53,6 +53,9 @@
 		B30D82E7263937EC000FDDA5 /* ConstraintDirectionalInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30D82C2263937EC000FDDA5 /* ConstraintDirectionalInsets.swift */; };
 		B30D82E8263937EC000FDDA5 /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30D82C3263937EC000FDDA5 /* ConstraintLayoutSupportDSL.swift */; };
 		B30D82E9263937EC000FDDA5 /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30D82C4263937EC000FDDA5 /* ConstraintMakerRelatable.swift */; };
+		B316694326395B19000CFAD7 /* TWMImageStickerContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B316694226395B19000CFAD7 /* TWMImageStickerContainerView.swift */; };
+		B3166948263960DE000CFAD7 /* TWMSavePhotoMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3166947263960DE000CFAD7 /* TWMSavePhotoMethod.swift */; };
+		B316694A263964B0000CFAD7 /* TWMEditPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3166949263964B0000CFAD7 /* TWMEditPhotoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +131,9 @@
 		B30D82C2263937EC000FDDA5 /* ConstraintDirectionalInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintDirectionalInsets.swift; sourceTree = "<group>"; };
 		B30D82C3263937EC000FDDA5 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
 		B30D82C4263937EC000FDDA5 /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
+		B316694226395B19000CFAD7 /* TWMImageStickerContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWMImageStickerContainerView.swift; sourceTree = "<group>"; };
+		B3166947263960DE000CFAD7 /* TWMSavePhotoMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWMSavePhotoMethod.swift; sourceTree = "<group>"; };
+		B3166949263964B0000CFAD7 /* TWMEditPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWMEditPhotoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +168,8 @@
 		B30D8162263800E8000FDDA5 /* ImageProcessing */ = {
 			isa = PBXGroup;
 			children = (
+				B316694626395FB5000CFAD7 /* TWMSavePhoto */,
+				B316694526395D83000CFAD7 /* TWMEditPhoto */,
 				B30D829E263937EC000FDDA5 /* SnapKit */,
 				B30D81BA2638F5D4000FDDA5 /* TWMShowPhoto */,
 				B30D81B92638F5BC000FDDA5 /* TWMPickerPhoto */,
@@ -178,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				B30D81B62638EC36000FDDA5 /* TWMPickerPhotoController.swift */,
+				B316694226395B19000CFAD7 /* TWMImageStickerContainerView.swift */,
 				B30D82902639144D000FDDA5 /* ZLPhotoBrowser.xcodeproj */,
 			);
 			path = TWMPickerPhoto;
@@ -250,6 +259,22 @@
 				B30D82C4263937EC000FDDA5 /* ConstraintMakerRelatable.swift */,
 			);
 			path = SnapKit;
+			sourceTree = "<group>";
+		};
+		B316694526395D83000CFAD7 /* TWMEditPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				B3166949263964B0000CFAD7 /* TWMEditPhotoController.swift */,
+			);
+			path = TWMEditPhoto;
+			sourceTree = "<group>";
+		};
+		B316694626395FB5000CFAD7 /* TWMSavePhoto */ = {
+			isa = PBXGroup;
+			children = (
+				B3166947263960DE000CFAD7 /* TWMSavePhotoMethod.swift */,
+			);
+			path = TWMSavePhoto;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,8 +387,11 @@
 				B30D81B426384820000FDDA5 /* TWMShowPhotoCollectionViewCell.swift in Sources */,
 				B30D82DE263937EC000FDDA5 /* ConstraintRelation.swift in Sources */,
 				B30D82D0263937EC000FDDA5 /* ConstraintPriority.swift in Sources */,
+				B316694A263964B0000CFAD7 /* TWMEditPhotoController.swift in Sources */,
+				B3166948263960DE000CFAD7 /* TWMSavePhotoMethod.swift in Sources */,
 				B30D82C5263937EC000FDDA5 /* ConstraintMultiplierTarget.swift in Sources */,
 				B30D82C7263937EC000FDDA5 /* ConstraintDescription.swift in Sources */,
+				B316694326395B19000CFAD7 /* TWMImageStickerContainerView.swift in Sources */,
 				B30D82E3263937EC000FDDA5 /* Debugging.swift in Sources */,
 				B30D82E0263937EC000FDDA5 /* ConstraintView+Extensions.swift in Sources */,
 				B30D82D1263937EC000FDDA5 /* ConstraintInsetTarget.swift in Sources */,
