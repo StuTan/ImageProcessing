@@ -44,6 +44,12 @@ class TWMShowPhotoController: UIViewController {
         
         view.backgroundColor = .white
         
+        let imagePaths = UserDefaults.standard.stringArray(forKey: "ImagePaths")
+        if imagePaths != nil {
+            let savePhotoMethod = TWMSavePhotoMethod()
+            images = savePhotoMethod.getImage(imageNames: imagePaths!)
+        }
+        
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -63,6 +69,7 @@ class TWMShowPhotoController: UIViewController {
         config.allowSelectLivePhoto = false
         config.allowSelectOriginal = false
         config.cropVideoAfterSelectThumbnail = true
+        config.imageStickerContainerView = TWMImageStickerContainerView()
         config.allowEditVideo = true
         config.allowMixSelect = false
         config.maxSelectCount = 100
@@ -74,12 +81,23 @@ class TWMShowPhotoController: UIViewController {
         
         photoPicker.selectImageBlock = { [weak self] (images, assets, _) in
             self?.hasSelectVideo = assets.first?.mediaType == .video
-            self?.images.append(contentsOf: images)
+            self?.images.append(contentsOf: images) //每次添加选取的图片
             self?.assets.append(contentsOf: assets)
             self?.collectionView.reloadData()
+            // 使用其他线程完成图片存储任务
+            self?.savePhotos()
         }
-        
         photoPicker.showPhotoLibrary(sender: self)
+    }
+    
+    func savePhotos() {
+        var imagePaths = [String]()
+        let savePhotoMethod = TWMSavePhotoMethod()
+        for image in self.images {
+            imagePaths.append(savePhotoMethod.saveImage(image: image))
+        }
+        UserDefaults.standard.set(imagePaths, forKey: "ImagePaths") //imagePaths
+        UserDefaults.standard.synchronize();
     }
     
 }
@@ -113,7 +131,7 @@ extension TWMShowPhotoController: UICollectionViewDataSource, UICollectionViewDe
         
         if indexPath.row < images.count {
             cell.imageView.image = images[indexPath.row]
-            cell.playImageView.isHidden = assets[indexPath.row].mediaType != .video
+//            cell.playImageView.isHidden = assets[indexPath.row].mediaType != .video
         } else {
             cell.imageView.image = UIImage(named: "addPhoto")
             cell.playImageView.isHidden = true
@@ -124,50 +142,11 @@ extension TWMShowPhotoController: UICollectionViewDataSource, UICollectionViewDe
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.row == images.count {
+            print("开始添加图像")
             selectPhotos()
+            print("图像添加完成")
         } else {
-            let previewVC = ZLImagePreviewController(datas: assets, index: indexPath.row, showSelectBtn: true)
-            
-            previewVC.doneBlock = { [weak self] (res) in
-                guard let `self` = self else { return }
-                if res.isEmpty {
-                    self.assets.removeAll()
-                    self.images.removeAll()
-                    self.collectionView.reloadData()
-                    return
-                }
-                
-                if res.count != self.assets.count {
-                    var p = 0, removeIndex: [Int] = []
-                    for item in res {
-                        var index = 0
-                        for i in p..<self.assets.count {
-                            if self.assets[i] == item as! PHAsset {
-                                index = i
-                                break
-                            }
-                        }
-                        
-                        if index > p {
-                            removeIndex.append(contentsOf: p..<index)
-                        }
-                        if index < p {
-                            removeIndex.append(index)
-                        }
-                        p = index + 1
-                    }
-                    removeIndex.append(contentsOf: p..<self.assets.count)
-                    
-                    removeIndex.reversed().forEach { (index) in
-                        self.assets.remove(at: index)
-                        self.images.remove(at: index)
-                    }
-                    self.collectionView.reloadData()
-                }
-            }
-            
-            previewVC.modalPresentationStyle = .fullScreen
-            showDetailViewController(previewVC, sender: nil)
+            // 点击进入编辑页面
         }
     }
     
