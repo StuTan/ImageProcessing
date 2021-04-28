@@ -4,103 +4,175 @@
 //
 //  Created by StuTan on 2021/4/27.
 //
-
-import Foundation
+ 
 import UIKit
-
-private let ImageView_Y: CGFloat = {
-    isIphoneX ? 108 : 84
-}()
+import Photos
+import ZLPhotoBrowser
 
 class TWMShowPhotoController: UIViewController {
-    
-    var showLabel = UILabel()
-//    var dataArr = NSMutableArray()//数据源
-    var dataArr = ["http://192.168.0.111/111.jpg","http://192.168.0.111/222.jpg"]
 
+    var collectionView: UICollectionView!
     
-    lazy var imageView: UIImageView = {
-        let view = UIImageView.init(frame: CGRect(x: 20, y: ImageView_Y + kScreenH/2 - 270, width: kScreenW - 40, height: 300))
-        view.contentMode = .scaleAspectFit
-        view.image = UIImage.init(named: "add-btn")
-        let singleTapGesture = UITapGestureRecognizer(target: self, action: #selector(imageViewClick))
-        view.addGestureRecognizer(singleTapGesture)
-        view.isUserInteractionEnabled = true
-        return view
-    }()
-     
+    var images: [UIImage] = []
     
-    lazy var collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.minimumInteritemSpacing = 0.0  //水平间隔
-        layout.minimumLineSpacing = 5.0       //垂直行间距
-        let view = UICollectionView.init(frame: CGRect(x:0, y: ImageView_Y, width: kScreenW, height: kScreenH), collectionViewLayout: layout)
-        view.contentMode = .scaleAspectFit
-        view.isUserInteractionEnabled = true
-        view.backgroundColor = .white
-        // 注册cell
-        view.register(TWMShowPhotoCollectionViewCell.self, forCellWithReuseIdentifier:"cell")
-        view.delegate = self;
-        view.dataSource = self;
-        // 设置每一个cell的宽高
-        layout.itemSize = CGSize(width: (kScreenW-30)/3, height: (kScreenW)/3)
-        return view
+    var assets: [PHAsset] = []
+    
+    var hasSelectVideo = false
+    
+    static let propertyLabel: Set<String> = ["allowSelectImage", "allowSelectVideo", "allowSelectGif", "allowSelectLivePhoto", "allowSelectOriginal", "cropVideoAfterSelectThumbnail", "allowEditVideo", "allowMixSelect", "maxSelectCount", "maxEditVideoTime"]
+    
+    let originalConfig: [String: Any] = {
+        var dic = [String: Any]()
+        for label in propertyLabel {
+            dic[label] = ZLPhotoConfiguration.default().value(forKey: label)
+        }
+        return dic
     }()
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+    
+    deinit {
+        for label in TWMShowPhotoController.propertyLabel {
+            ZLPhotoConfiguration.default().setValue(originalConfig[label], forKey: label)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.backgroundColor = .white
-//        getData()
-        if imageArray.count == 0 {
-            self.view.addSubview(imageView)
-        } else {
-            self.view.addSubview(collectionView)
+        
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.backgroundColor = .white
+        view.addSubview(collectionView)
+        collectionView.snp.makeConstraints { (make) in
+            make.edges.equalTo(self.view)
+        }
+        collectionView.register(TWMShowPhotoCollectionViewCell.self, forCellWithReuseIdentifier: "TWMShowPhotoCollectionViewCell")
+    }
+    
+    func selectPhotos() {
+        let config = ZLPhotoConfiguration.default()
+        config.allowSelectImage = true
+        config.allowSelectVideo = images.count == 0
+        config.allowSelectGif = false
+        config.allowSelectLivePhoto = false
+        config.allowSelectOriginal = false
+        config.cropVideoAfterSelectThumbnail = true
+        config.allowEditVideo = true
+        config.allowMixSelect = false
+        config.maxSelectCount = 100
+        config.maxEditVideoTime = 15
+        
+        // You can provide the selected assets so as not to repeat selection.
+        // Like this 'let photoPicker = ZLPhotoPreviewSheet(selectedAssets: assets)'
+        let photoPicker = ZLPhotoPreviewSheet()
+        
+        photoPicker.selectImageBlock = { [weak self] (images, assets, _) in
+            self?.hasSelectVideo = assets.first?.mediaType == .video
+            self?.images.append(contentsOf: images)
+            self?.assets.append(contentsOf: assets)
+            self?.collectionView.reloadData()
         }
         
-    }
-     
-    @objc func imageViewClick() {
-//        var _: TWMPickerPhotoController = TWMPickerPhotoController()
-        print("开始添加图片")
-        let vc = TWMPickerPhotoController()
-        self.navigationController?.pushViewController(vc, animated: true)
-        print("添加图片结束")
+        photoPicker.showPhotoLibrary(sender: self)
     }
     
-    
-    
-//    func getData(){
-//        dataArr.append("Tomcat")
-//        dataArr.append("Jetty")
-//        dataArr.append("Apache")
-//        dataArr.append("Jboss")
-//    }
 }
 
- 
-extension TWMShowPhotoController: UICollectionViewDelegate, UICollectionViewDataSource {
+
+extension TWMShowPhotoController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    // 返回UICollectionView有多少个组
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    // 返回UICollectionView每个组有多少个元素
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return hasSelectVideo ? 1 : (images.count + 1)
     }
     
-    // 返回UICollectionView的每个Cell
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let w = (collectionView.frame.width - 40 - 10) / 3
+        return CGSize(width: w, height: w)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)as! TWMShowPhotoCollectionViewCell
-        cell.imageView.image = UIImage.init(named: "add-btn")
-//        cell.titleLabel?.text = "wangjie"
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TWMShowPhotoCollectionViewCell", for: indexPath) as! TWMShowPhotoCollectionViewCell
+        
+        if indexPath.row < images.count {
+            cell.imageView.image = images[indexPath.row]
+            cell.playImageView.isHidden = assets[indexPath.row].mediaType != .video
+        } else {
+            cell.imageView.image = UIImage(named: "addPhoto")
+            cell.playImageView.isHidden = true
+        }
+        
         return cell
     }
     
-    // 点击UICollectionView的Cell执行的操作
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("点击图片，进入图片预览编辑页面")
+        if indexPath.row == images.count {
+            selectPhotos()
+        } else {
+            let previewVC = ZLImagePreviewController(datas: assets, index: indexPath.row, showSelectBtn: true)
+            
+            previewVC.doneBlock = { [weak self] (res) in
+                guard let `self` = self else { return }
+                if res.isEmpty {
+                    self.assets.removeAll()
+                    self.images.removeAll()
+                    self.collectionView.reloadData()
+                    return
+                }
+                
+                if res.count != self.assets.count {
+                    var p = 0, removeIndex: [Int] = []
+                    for item in res {
+                        var index = 0
+                        for i in p..<self.assets.count {
+                            if self.assets[i] == item as! PHAsset {
+                                index = i
+                                break
+                            }
+                        }
+                        
+                        if index > p {
+                            removeIndex.append(contentsOf: p..<index)
+                        }
+                        if index < p {
+                            removeIndex.append(index)
+                        }
+                        p = index + 1
+                    }
+                    removeIndex.append(contentsOf: p..<self.assets.count)
+                    
+                    removeIndex.reversed().forEach { (index) in
+                        self.assets.remove(at: index)
+                        self.images.remove(at: index)
+                    }
+                    self.collectionView.reloadData()
+                }
+            }
+            
+            previewVC.modalPresentationStyle = .fullScreen
+            showDetailViewController(previewVC, sender: nil)
+        }
     }
+    
 }
+
+
+
+
