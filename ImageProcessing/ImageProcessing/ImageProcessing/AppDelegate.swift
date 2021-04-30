@@ -29,10 +29,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        window = UIWindow(frame: UIScreen.main.bounds)
-        let rootNav = UINavigationController(rootViewController: TWMShowPhotoController())
-        window?.rootViewController = rootNav
-        window?.makeKeyAndVisible()
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        let rootNav = UINavigationController(rootViewController: TWMVisionDetectionController())
+//        window?.rootViewController = rootNav
+//        window?.makeKeyAndVisible()
 
         return true
     }

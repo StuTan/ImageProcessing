@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B30D8164263800E8000FDDA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30D8163263800E8000FDDA5 /* AppDelegate.swift */; };
-		B30D816B263800E8000FDDA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B30D8169263800E8000FDDA5 /* Main.storyboard */; };
 		B30D816D263800E9000FDDA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B30D816C263800E9000FDDA5 /* Assets.xcassets */; };
 		B30D8170263800E9000FDDA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B30D816E263800E9000FDDA5 /* LaunchScreen.storyboard */; };
 		B30D818726382CC2000FDDA5 /* TWMShowPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30D818626382CC2000FDDA5 /* TWMShowPhotoController.swift */; };
@@ -56,6 +55,15 @@
 		B316694326395B19000CFAD7 /* TWMImageStickerContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B316694226395B19000CFAD7 /* TWMImageStickerContainerView.swift */; };
 		B3166948263960DE000CFAD7 /* TWMSavePhotoMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3166947263960DE000CFAD7 /* TWMSavePhotoMethod.swift */; };
 		B316694A263964B0000CFAD7 /* TWMEditPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3166949263964B0000CFAD7 /* TWMEditPhotoController.swift */; };
+		B3166953263A3D14000CFAD7 /* TWMCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3166952263A3D14000CFAD7 /* TWMCustomButton.swift */; };
+		B3166955263A3D38000CFAD7 /* TWMStyleTransferController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3166954263A3D38000CFAD7 /* TWMStyleTransferController.swift */; };
+		B3166957263A3D76000CFAD7 /* StarryStyle.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B3166956263A3D76000CFAD7 /* StarryStyle.mlmodel */; };
+		B316695A263A4F2C000CFAD7 /* TWMGestureRecognitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3166959263A4F2C000CFAD7 /* TWMGestureRecognitionController.swift */; };
+		B316695C263A4F70000CFAD7 /* example_5s0_hand_model.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B316695B263A4F70000CFAD7 /* example_5s0_hand_model.mlmodel */; };
+		B3C4BC4D263B991800357B75 /* TWMVisionDetectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4BC4C263B991800357B75 /* TWMVisionDetectionController.swift */; };
+		B3C4BC4F263B996500357B75 /* TWMVisionDetectionPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4BC4E263B996500357B75 /* TWMVisionDetectionPreviewView.swift */; };
+		B3C4BC51263B99A900357B75 /* TWMVisionDetectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4BC50263B99A900357B75 /* TWMVisionDetectionExtensions.swift */; };
+		B3C4BC53263BD8D900357B75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3C4BC52263BD8D900357B75 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,7 +93,6 @@
 /* Begin PBXFileReference section */
 		B30D8160263800E8000FDDA5 /* ImageProcessing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageProcessing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B30D8163263800E8000FDDA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B30D816A263800E8000FDDA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B30D816C263800E9000FDDA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B30D816F263800E9000FDDA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B30D8171263800E9000FDDA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -134,6 +141,15 @@
 		B316694226395B19000CFAD7 /* TWMImageStickerContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWMImageStickerContainerView.swift; sourceTree = "<group>"; };
 		B3166947263960DE000CFAD7 /* TWMSavePhotoMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWMSavePhotoMethod.swift; sourceTree = "<group>"; };
 		B3166949263964B0000CFAD7 /* TWMEditPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWMEditPhotoController.swift; sourceTree = "<group>"; };
+		B3166952263A3D14000CFAD7 /* TWMCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWMCustomButton.swift; sourceTree = "<group>"; };
+		B3166954263A3D38000CFAD7 /* TWMStyleTransferController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWMStyleTransferController.swift; sourceTree = "<group>"; };
+		B3166956263A3D76000CFAD7 /* StarryStyle.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = StarryStyle.mlmodel; sourceTree = "<group>"; };
+		B3166959263A4F2C000CFAD7 /* TWMGestureRecognitionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWMGestureRecognitionController.swift; sourceTree = "<group>"; };
+		B316695B263A4F70000CFAD7 /* example_5s0_hand_model.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = example_5s0_hand_model.mlmodel; sourceTree = "<group>"; };
+		B3C4BC4C263B991800357B75 /* TWMVisionDetectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWMVisionDetectionController.swift; sourceTree = "<group>"; };
+		B3C4BC4E263B996500357B75 /* TWMVisionDetectionPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWMVisionDetectionPreviewView.swift; sourceTree = "<group>"; };
+		B3C4BC50263B99A900357B75 /* TWMVisionDetectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWMVisionDetectionExtensions.swift; sourceTree = "<group>"; };
+		B3C4BC52263BD8D900357B75 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,13 +184,16 @@
 		B30D8162263800E8000FDDA5 /* ImageProcessing */ = {
 			isa = PBXGroup;
 			children = (
+				B3C4BC4A263B98ED00357B75 /* TWMVisionDetection */,
+				B3166958263A4F13000CFAD7 /* TWMGestureRecognition */,
+				B3166950263A3CA9000CFAD7 /* TWMStyleTransfer */,
 				B316694626395FB5000CFAD7 /* TWMSavePhoto */,
 				B316694526395D83000CFAD7 /* TWMEditPhoto */,
 				B30D829E263937EC000FDDA5 /* SnapKit */,
 				B30D81BA2638F5D4000FDDA5 /* TWMShowPhoto */,
 				B30D81B92638F5BC000FDDA5 /* TWMPickerPhoto */,
 				B30D8163263800E8000FDDA5 /* AppDelegate.swift */,
-				B30D8169263800E8000FDDA5 /* Main.storyboard */,
+				B3C4BC52263BD8D900357B75 /* Main.storyboard */,
 				B30D816C263800E9000FDDA5 /* Assets.xcassets */,
 				B30D816E263800E9000FDDA5 /* LaunchScreen.storyboard */,
 				B30D8171263800E9000FDDA5 /* Info.plist */,
@@ -277,6 +296,35 @@
 			path = TWMSavePhoto;
 			sourceTree = "<group>";
 		};
+		B3166950263A3CA9000CFAD7 /* TWMStyleTransfer */ = {
+			isa = PBXGroup;
+			children = (
+				B3166956263A3D76000CFAD7 /* StarryStyle.mlmodel */,
+				B3166952263A3D14000CFAD7 /* TWMCustomButton.swift */,
+				B3166954263A3D38000CFAD7 /* TWMStyleTransferController.swift */,
+			);
+			path = TWMStyleTransfer;
+			sourceTree = "<group>";
+		};
+		B3166958263A4F13000CFAD7 /* TWMGestureRecognition */ = {
+			isa = PBXGroup;
+			children = (
+				B316695B263A4F70000CFAD7 /* example_5s0_hand_model.mlmodel */,
+				B3166959263A4F2C000CFAD7 /* TWMGestureRecognitionController.swift */,
+			);
+			path = TWMGestureRecognition;
+			sourceTree = "<group>";
+		};
+		B3C4BC4A263B98ED00357B75 /* TWMVisionDetection */ = {
+			isa = PBXGroup;
+			children = (
+				B3C4BC4C263B991800357B75 /* TWMVisionDetectionController.swift */,
+				B3C4BC50263B99A900357B75 /* TWMVisionDetectionExtensions.swift */,
+				B3C4BC4E263B996500357B75 /* TWMVisionDetectionPreviewView.swift */,
+			);
+			path = TWMVisionDetection;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -353,7 +401,7 @@
 			files = (
 				B30D8170263800E9000FDDA5 /* LaunchScreen.storyboard in Resources */,
 				B30D816D263800E9000FDDA5 /* Assets.xcassets in Resources */,
-				B30D816B263800E8000FDDA5 /* Main.storyboard in Resources */,
+				B3C4BC53263BD8D900357B75 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +414,7 @@
 			files = (
 				B30D82D3263937EC000FDDA5 /* ConstraintMakerRelatable+Extensions.swift in Sources */,
 				B30D82E9263937EC000FDDA5 /* ConstraintMakerRelatable.swift in Sources */,
+				B3C4BC4F263B996500357B75 /* TWMVisionDetectionPreviewView.swift in Sources */,
 				B30D82D6263937EC000FDDA5 /* ConstraintView.swift in Sources */,
 				B30D82E2263937EC000FDDA5 /* Constraint.swift in Sources */,
 				B30D82DD263937EC000FDDA5 /* ConstraintMaker.swift in Sources */,
@@ -375,10 +424,14 @@
 				B30D82C9263937EC000FDDA5 /* ConstraintAttributes.swift in Sources */,
 				B30D82CA263937EC000FDDA5 /* ConstraintViewDSL.swift in Sources */,
 				B30D82C8263937EC000FDDA5 /* ConstraintMakerPriortizable.swift in Sources */,
+				B316695C263A4F70000CFAD7 /* example_5s0_hand_model.mlmodel in Sources */,
 				B30D82DC263937EC000FDDA5 /* ConstraintMakerEditable.swift in Sources */,
+				B316695A263A4F2C000CFAD7 /* TWMGestureRecognitionController.swift in Sources */,
 				B30D818726382CC2000FDDA5 /* TWMShowPhotoController.swift in Sources */,
 				B30D81B72638EC36000FDDA5 /* TWMPickerPhotoController.swift in Sources */,
+				B3C4BC4D263B991800357B75 /* TWMVisionDetectionController.swift in Sources */,
 				B30D82E7263937EC000FDDA5 /* ConstraintDirectionalInsets.swift in Sources */,
+				B3166957263A3D76000CFAD7 /* StarryStyle.mlmodel in Sources */,
 				B30D82CB263937EC000FDDA5 /* ConstraintPriorityTarget.swift in Sources */,
 				B30D82DB263937EC000FDDA5 /* ConstraintOffsetTarget.swift in Sources */,
 				B30D82DF263937EC000FDDA5 /* ConstraintLayoutGuideDSL.swift in Sources */,
@@ -398,9 +451,12 @@
 				B30D82D8263937EC000FDDA5 /* ConstraintLayoutSupport.swift in Sources */,
 				B30D82D5263937EC000FDDA5 /* UILayoutSupport+Extensions.swift in Sources */,
 				B30D82C6263937EC000FDDA5 /* LayoutConstraintItem.swift in Sources */,
+				B3166955263A3D38000CFAD7 /* TWMStyleTransferController.swift in Sources */,
+				B3166953263A3D14000CFAD7 /* TWMCustomButton.swift in Sources */,
 				B30D82E1263937EC000FDDA5 /* ConstraintItem.swift in Sources */,
 				B30D82E6263937EC000FDDA5 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
 				B30D82D7263937EC000FDDA5 /* ConstraintLayoutGuide.swift in Sources */,
+				B3C4BC51263B99A900357B75 /* TWMVisionDetectionExtensions.swift in Sources */,
 				B30D82D4263937EC000FDDA5 /* ConstraintConfig.swift in Sources */,
 				B30D82E5263937EC000FDDA5 /* LayoutConstraint.swift in Sources */,
 				B30D82CE263937EC000FDDA5 /* ConstraintDSL.swift in Sources */,
@@ -414,14 +470,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B30D8169263800E8000FDDA5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B30D816A263800E8000FDDA5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B30D816E263800E9000FDDA5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
