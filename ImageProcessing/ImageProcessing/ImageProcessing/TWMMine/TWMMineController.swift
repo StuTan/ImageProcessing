@@ -98,7 +98,7 @@ class TWMMineController: UIViewController {
         headerView.avatarImageView.isUserInteractionEnabled = true
         
         headerView.backgroundImageView.image = UIImage(named: "background")
-        headerView.avatarImageView.image = UIImage(named: "icon-MV_blingbling")
+        headerView.avatarImageView.image = UIImage(named: "imageSticker4")
         headerView.usernameLabel.text = "点击登录"
     }
     
