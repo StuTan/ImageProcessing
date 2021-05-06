@@ -88,6 +88,12 @@
 		B3CC980B2642C7B4005125A2 /* TWMMLModelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC980A2642C7B4005125A2 /* TWMMLModelProvider.swift */; };
 		B3CC980D2642C869005125A2 /* Pointillism.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B3CC980C2642C869005125A2 /* Pointillism.mlmodel */; };
 		B3CC980F2642C86F005125A2 /* StarryNight.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B3CC980E2642C86F005125A2 /* StarryNight.mlmodel */; };
+		B3CC98132643774E005125A2 /* UserCenterContentProxyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC98122643774E005125A2 /* UserCenterContentProxyViewController.swift */; };
+		B3CC981526437771005125A2 /* UserCenterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC981426437771005125A2 /* UserCenterHeaderView.swift */; };
+		B3CC981726437794005125A2 /* UserCenterSegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC981626437794005125A2 /* UserCenterSegmentedView.swift */; };
+		B3CC981A264377E6005125A2 /* WeiboListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC9819264377E6005125A2 /* WeiboListViewController.swift */; };
+		B3CC981C264377FB005125A2 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC981B264377FB005125A2 /* AlbumViewController.swift */; };
+		B3CC981E2643794A005125A2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC981D2643794A005125A2 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -208,6 +214,12 @@
 		B3CC980A2642C7B4005125A2 /* TWMMLModelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWMMLModelProvider.swift; sourceTree = "<group>"; };
 		B3CC980C2642C869005125A2 /* Pointillism.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Pointillism.mlmodel; sourceTree = "<group>"; };
 		B3CC980E2642C86F005125A2 /* StarryNight.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = StarryNight.mlmodel; sourceTree = "<group>"; };
+		B3CC98122643774E005125A2 /* UserCenterContentProxyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterContentProxyViewController.swift; sourceTree = "<group>"; };
+		B3CC981426437771005125A2 /* UserCenterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterHeaderView.swift; sourceTree = "<group>"; };
+		B3CC981626437794005125A2 /* UserCenterSegmentedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterSegmentedView.swift; sourceTree = "<group>"; };
+		B3CC9819264377E6005125A2 /* WeiboListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiboListViewController.swift; sourceTree = "<group>"; };
+		B3CC981B264377FB005125A2 /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
+		B3CC981D2643794A005125A2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -414,6 +426,7 @@
 		B3C4BC54263C29E000357B75 /* TWMMine */ = {
 			isa = PBXGroup;
 			children = (
+				B3CC9818264377B3005125A2 /* usercenter */,
 				B3C4BC55263C29F600357B75 /* TWMMineController.swift */,
 				B355A129263E877300240919 /* Wechat-Bridging-Header.h */,
 				B3CC97FD26424898005125A2 /* Extension+UIImage.swift */,
@@ -440,6 +453,19 @@
 				B3CC97EE26422FFF005125A2 /* OpenShareHeader.h */,
 			);
 			path = openshare;
+			sourceTree = "<group>";
+		};
+		B3CC9818264377B3005125A2 /* usercenter */ = {
+			isa = PBXGroup;
+			children = (
+				B3CC98122643774E005125A2 /* UserCenterContentProxyViewController.swift */,
+				B3CC981426437771005125A2 /* UserCenterHeaderView.swift */,
+				B3CC981626437794005125A2 /* UserCenterSegmentedView.swift */,
+				B3CC9819264377E6005125A2 /* WeiboListViewController.swift */,
+				B3CC981B264377FB005125A2 /* AlbumViewController.swift */,
+				B3CC981D2643794A005125A2 /* HomeViewController.swift */,
+			);
+			path = usercenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -560,6 +586,7 @@
 				B30D82E9263937EC000FDDA5 /* ConstraintMakerRelatable.swift in Sources */,
 				B3C4BC4F263B996500357B75 /* TWMVisionDetectionPreviewView.swift in Sources */,
 				B30D82D6263937EC000FDDA5 /* ConstraintView.swift in Sources */,
+				B3CC98132643774E005125A2 /* UserCenterContentProxyViewController.swift in Sources */,
 				B30D82E2263937EC000FDDA5 /* Constraint.swift in Sources */,
 				B30D82DD263937EC000FDDA5 /* ConstraintMaker.swift in Sources */,
 				B3CC97F726422FFF005125A2 /* OpenShare+QQ.m in Sources */,
@@ -570,6 +597,7 @@
 				B3CC97FA26422FFF005125A2 /* OpenShare+Renren.m in Sources */,
 				B30D82C9263937EC000FDDA5 /* ConstraintAttributes.swift in Sources */,
 				B30D82CA263937EC000FDDA5 /* ConstraintViewDSL.swift in Sources */,
+				B3CC981C264377FB005125A2 /* AlbumViewController.swift in Sources */,
 				B30D82C8263937EC000FDDA5 /* ConstraintMakerPriortizable.swift in Sources */,
 				B316695C263A4F70000CFAD7 /* example_5s0_hand_model.mlmodel in Sources */,
 				B30D82DC263937EC000FDDA5 /* ConstraintMakerEditable.swift in Sources */,
@@ -581,6 +609,7 @@
 				B30D82E7263937EC000FDDA5 /* ConstraintDirectionalInsets.swift in Sources */,
 				B3166957263A3D76000CFAD7 /* StarryStyle.mlmodel in Sources */,
 				B30D82CB263937EC000FDDA5 /* ConstraintPriorityTarget.swift in Sources */,
+				B3CC981A264377E6005125A2 /* WeiboListViewController.swift in Sources */,
 				B30D82DB263937EC000FDDA5 /* ConstraintOffsetTarget.swift in Sources */,
 				B30D82DF263937EC000FDDA5 /* ConstraintLayoutGuideDSL.swift in Sources */,
 				B30D8164263800E8000FDDA5 /* AppDelegate.swift in Sources */,
@@ -599,16 +628,19 @@
 				B30D82D1263937EC000FDDA5 /* ConstraintInsetTarget.swift in Sources */,
 				B30D82D8263937EC000FDDA5 /* ConstraintLayoutSupport.swift in Sources */,
 				B30D82D5263937EC000FDDA5 /* UILayoutSupport+Extensions.swift in Sources */,
+				B3CC981526437771005125A2 /* UserCenterHeaderView.swift in Sources */,
 				B30D82C6263937EC000FDDA5 /* LayoutConstraintItem.swift in Sources */,
 				B3166955263A3D38000CFAD7 /* TWMStyleTransferController.swift in Sources */,
 				B3166953263A3D14000CFAD7 /* TWMCustomButton.swift in Sources */,
 				B30D82E1263937EC000FDDA5 /* ConstraintItem.swift in Sources */,
 				B30D82E6263937EC000FDDA5 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
 				B3677A57263FB390005CAF3E /* UIAlertExtension.swift in Sources */,
+				B3CC981726437794005125A2 /* UserCenterSegmentedView.swift in Sources */,
 				B30D82D7263937EC000FDDA5 /* ConstraintLayoutGuide.swift in Sources */,
 				B3CC97F926422FFF005125A2 /* OpenShare+Weixin.m in Sources */,
 				B3C4BC51263B99A900357B75 /* TWMVisionDetectionExtensions.swift in Sources */,
 				B30D82D4263937EC000FDDA5 /* ConstraintConfig.swift in Sources */,
+				B3CC981E2643794A005125A2 /* HomeViewController.swift in Sources */,
 				B30D82E5263937EC000FDDA5 /* LayoutConstraint.swift in Sources */,
 				B30D82CE263937EC000FDDA5 /* ConstraintDSL.swift in Sources */,
 				B3CC98092642C785005125A2 /* TWMNSTError.swift in Sources */,

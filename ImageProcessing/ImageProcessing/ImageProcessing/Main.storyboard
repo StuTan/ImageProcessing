@@ -271,39 +271,10 @@
                     <view key="view" contentMode="scaleToFill" id="w1c-BD-aej">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oSv-jB-RHy">
-                                <rect key="frame" x="137.5" y="60.5" width="100" height="99"/>
-                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="oSv-jB-RHy" secondAttribute="height" multiplier="1:1" id="6vP-eM-fOd"/>
-                                    <constraint firstAttribute="height" constant="100" id="8l2-uz-zzq"/>
-                                    <constraint firstAttribute="width" constant="100" id="jHb-38-0jh"/>
-                                </constraints>
-                            </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Jh-SR-ZmA">
-                                <rect key="frame" x="67.5" y="210" width="240" height="308"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="2bn-Cz-S4o"/>
-                                </constraints>
-                            </tableView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="o8A-pp-aTP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="oSv-jB-RHy" firstAttribute="top" secondItem="o8A-pp-aTP" secondAttribute="top" constant="60" id="0o0-yf-QJo"/>
-                            <constraint firstItem="2Jh-SR-ZmA" firstAttribute="centerX" secondItem="w1c-BD-aej" secondAttribute="centerX" id="TX4-AS-3AL"/>
-                            <constraint firstItem="2Jh-SR-ZmA" firstAttribute="top" secondItem="oSv-jB-RHy" secondAttribute="bottom" constant="50" id="a3v-jq-n26"/>
-                            <constraint firstItem="oSv-jB-RHy" firstAttribute="centerX" secondItem="w1c-BD-aej" secondAttribute="centerX" id="iLd-l6-ApA"/>
-                            <constraint firstItem="o8A-pp-aTP" firstAttribute="bottom" secondItem="2Jh-SR-ZmA" secondAttribute="bottom" constant="100" id="lxz-om-xbU"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="我的" image="person.fill" catalog="system" id="P3u-At-gXN"/>
-                    <connections>
-                        <outlet property="imageView" destination="oSv-jB-RHy" id="zNe-JH-Yru"/>
-                        <outlet property="mineTableView" destination="2Jh-SR-ZmA" id="5J6-ac-LXb"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="apS-lP-VyQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -326,7 +297,6 @@
         <image name="hand.raised.fill" catalog="system" width="128" height="124"/>
         <image name="lifepreserver.fill" catalog="system" width="128" height="121"/>
         <image name="paintpalette.fill" catalog="system" width="128" height="105"/>
-        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="test_jpg" width="984" height="799"/>
         <systemColor name="systemBackgroundColor">
