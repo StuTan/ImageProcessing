@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B10CFA20959FFC0F3256F03A /* Pods_ImageProcessing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26395250FFBB6D7F85D59D6D /* Pods_ImageProcessing.framework */; };
 		B30D8164263800E8000FDDA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30D8163263800E8000FDDA5 /* AppDelegate.swift */; };
 		B30D816D263800E9000FDDA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B30D816C263800E9000FDDA5 /* Assets.xcassets */; };
 		B30D8170263800E9000FDDA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B30D816E263800E9000FDDA5 /* LaunchScreen.storyboard */; };
 		B30D818726382CC2000FDDA5 /* TWMShowPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30D818626382CC2000FDDA5 /* TWMShowPhotoController.swift */; };
 		B30D81B426384820000FDDA5 /* TWMShowPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30D81B326384820000FDDA5 /* TWMShowPhotoCollectionViewCell.swift */; };
 		B30D81B72638EC36000FDDA5 /* TWMPickerPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30D81B62638EC36000FDDA5 /* TWMPickerPhotoController.swift */; };
-		B30D829B26393761000FDDA5 /* ZLPhotoBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B30D82952639144D000FDDA5 /* ZLPhotoBrowser.framework */; };
-		B30D829C26393761000FDDA5 /* ZLPhotoBrowser.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B30D82952639144D000FDDA5 /* ZLPhotoBrowser.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B30D82C5263937EC000FDDA5 /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30D829F263937EC000FDDA5 /* ConstraintMultiplierTarget.swift */; };
 		B30D82C6263937EC000FDDA5 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30D82A0263937EC000FDDA5 /* LayoutConstraintItem.swift */; };
 		B30D82C7263937EC000FDDA5 /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30D82A1263937EC000FDDA5 /* ConstraintDescription.swift */; };
@@ -54,22 +53,47 @@
 		B30D82E9263937EC000FDDA5 /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30D82C4263937EC000FDDA5 /* ConstraintMakerRelatable.swift */; };
 		B316694326395B19000CFAD7 /* TWMImageStickerContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B316694226395B19000CFAD7 /* TWMImageStickerContainerView.swift */; };
 		B3166948263960DE000CFAD7 /* TWMSavePhotoMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3166947263960DE000CFAD7 /* TWMSavePhotoMethod.swift */; };
-		B316694A263964B0000CFAD7 /* TWMEditPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3166949263964B0000CFAD7 /* TWMEditPhotoController.swift */; };
 		B3166953263A3D14000CFAD7 /* TWMCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3166952263A3D14000CFAD7 /* TWMCustomButton.swift */; };
 		B3166955263A3D38000CFAD7 /* TWMStyleTransferController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3166954263A3D38000CFAD7 /* TWMStyleTransferController.swift */; };
 		B3166957263A3D76000CFAD7 /* StarryStyle.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B3166956263A3D76000CFAD7 /* StarryStyle.mlmodel */; };
 		B316695A263A4F2C000CFAD7 /* TWMGestureRecognitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3166959263A4F2C000CFAD7 /* TWMGestureRecognitionController.swift */; };
 		B316695C263A4F70000CFAD7 /* example_5s0_hand_model.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B316695B263A4F70000CFAD7 /* example_5s0_hand_model.mlmodel */; };
+		B355A0F5263C430800240919 /* ZLPhotoBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B355A0F4263C42FF00240919 /* ZLPhotoBrowser.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		B355A0F6263C430800240919 /* ZLPhotoBrowser.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B355A0F4263C42FF00240919 /* ZLPhotoBrowser.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B355A0F9263C433000240919 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B355A105263E3D9A00240919 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B355A104263E3D9A00240919 /* SystemConfiguration.framework */; };
+		B355A108263E3DD200240919 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B355A106263E3DA700240919 /* libz.tbd */; };
+		B355A10A263E3DD800240919 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B355A109263E3DD800240919 /* libsqlite3.tbd */; };
+		B355A10C263E3DE300240919 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B355A10B263E3DE300240919 /* libc++.tbd */; };
+		B355A10E263E3DEE00240919 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B355A10D263E3DEE00240919 /* Security.framework */; };
+		B355A110263E3DF900240919 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B355A10F263E3DF900240919 /* CoreTelephony.framework */; };
+		B355A112263E3E0200240919 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B355A111263E3E0200240919 /* CFNetwork.framework */; };
+		B3677A57263FB390005CAF3E /* UIAlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3677A56263FB390005CAF3E /* UIAlertExtension.swift */; };
 		B3C4BC4D263B991800357B75 /* TWMVisionDetectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4BC4C263B991800357B75 /* TWMVisionDetectionController.swift */; };
 		B3C4BC4F263B996500357B75 /* TWMVisionDetectionPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4BC4E263B996500357B75 /* TWMVisionDetectionPreviewView.swift */; };
 		B3C4BC51263B99A900357B75 /* TWMVisionDetectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4BC50263B99A900357B75 /* TWMVisionDetectionExtensions.swift */; };
 		B3C4BC53263BD8D900357B75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3C4BC52263BD8D900357B75 /* Main.storyboard */; };
+		B3C4BC56263C29F600357B75 /* TWMMineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4BC55263C29F600357B75 /* TWMMineController.swift */; };
+		B3CC97E42641753A005125A2 /* ZLPhotoBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B355A0F4263C42FF00240919 /* ZLPhotoBrowser.framework */; };
+		B3CC97F526422FFF005125A2 /* OpenShare+Weibo.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CC97E826422FFF005125A2 /* OpenShare+Weibo.m */; };
+		B3CC97F626422FFF005125A2 /* OpenShare.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CC97E926422FFF005125A2 /* OpenShare.m */; };
+		B3CC97F726422FFF005125A2 /* OpenShare+QQ.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CC97EB26422FFF005125A2 /* OpenShare+QQ.m */; };
+		B3CC97F826422FFF005125A2 /* OpenShare+Alipay.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CC97EC26422FFF005125A2 /* OpenShare+Alipay.m */; };
+		B3CC97F926422FFF005125A2 /* OpenShare+Weixin.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CC97ED26422FFF005125A2 /* OpenShare+Weixin.m */; };
+		B3CC97FA26422FFF005125A2 /* OpenShare+Renren.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CC97F026422FFF005125A2 /* OpenShare+Renren.m */; };
+		B3CC97FE26424898005125A2 /* Extension+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC97FD26424898005125A2 /* Extension+UIImage.swift */; };
+		B3CC980326428EE0005125A2 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3CC980226428EE0005125A2 /* AuthenticationServices.framework */; };
+		B3CC98072642C75B005125A2 /* UIImage+CoreML.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC98062642C75B005125A2 /* UIImage+CoreML.swift */; };
+		B3CC98092642C785005125A2 /* TWMNSTError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC98082642C785005125A2 /* TWMNSTError.swift */; };
+		B3CC980B2642C7B4005125A2 /* TWMMLModelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC980A2642C7B4005125A2 /* TWMMLModelProvider.swift */; };
+		B3CC980D2642C869005125A2 /* Pointillism.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B3CC980C2642C869005125A2 /* Pointillism.mlmodel */; };
+		B3CC980F2642C86F005125A2 /* StarryNight.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B3CC980E2642C86F005125A2 /* StarryNight.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B30D82942639144D000FDDA5 /* PBXContainerItemProxy */ = {
+		B355A0F3263C42FF00240919 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B30D82902639144D000FDDA5 /* ZLPhotoBrowser.xcodeproj */;
+			containerPortal = B355A0EF263C42FF00240919 /* ZLPhotoBrowser.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = E4C911C024E284B30061DA40;
 			remoteInfo = ZLPhotoBrowser;
@@ -77,13 +101,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B30D829D26393761000FDDA5 /* Embed Frameworks */ = {
+		B355A0F7263C430800240919 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B30D829C26393761000FDDA5 /* ZLPhotoBrowser.framework in Embed Frameworks */,
+				B355A0F6263C430800240919 /* ZLPhotoBrowser.framework in Embed Frameworks */,
+				B355A0F9263C433000240919 /* (null) in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -91,6 +116,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0E0EC1ABB659009E92A5871F /* Pods-ImageProcessing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageProcessing.debug.xcconfig"; path = "Target Support Files/Pods-ImageProcessing/Pods-ImageProcessing.debug.xcconfig"; sourceTree = "<group>"; };
+		26395250FFBB6D7F85D59D6D /* Pods_ImageProcessing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageProcessing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C9C6FA3355FA1AEFC169093 /* Pods-ImageProcessing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageProcessing.release.xcconfig"; path = "Target Support Files/Pods-ImageProcessing/Pods-ImageProcessing.release.xcconfig"; sourceTree = "<group>"; };
 		B30D8160263800E8000FDDA5 /* ImageProcessing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageProcessing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B30D8163263800E8000FDDA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B30D816C263800E9000FDDA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,7 +127,6 @@
 		B30D818626382CC2000FDDA5 /* TWMShowPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWMShowPhotoController.swift; sourceTree = "<group>"; };
 		B30D81B326384820000FDDA5 /* TWMShowPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWMShowPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		B30D81B62638EC36000FDDA5 /* TWMPickerPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWMPickerPhotoController.swift; sourceTree = "<group>"; };
-		B30D82902639144D000FDDA5 /* ZLPhotoBrowser.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZLPhotoBrowser.xcodeproj; path = "../../../../../Documents/毕设/毕设工程/ZLPhotoBrowser-master/ZLPhotoBrowser.xcodeproj"; sourceTree = "<group>"; };
 		B30D829F263937EC000FDDA5 /* ConstraintMultiplierTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMultiplierTarget.swift; sourceTree = "<group>"; };
 		B30D82A0263937EC000FDDA5 /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstraintItem.swift; sourceTree = "<group>"; };
 		B30D82A1263937EC000FDDA5 /* ConstraintDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintDescription.swift; sourceTree = "<group>"; };
@@ -140,16 +167,47 @@
 		B30D82C4263937EC000FDDA5 /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
 		B316694226395B19000CFAD7 /* TWMImageStickerContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWMImageStickerContainerView.swift; sourceTree = "<group>"; };
 		B3166947263960DE000CFAD7 /* TWMSavePhotoMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWMSavePhotoMethod.swift; sourceTree = "<group>"; };
-		B3166949263964B0000CFAD7 /* TWMEditPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWMEditPhotoController.swift; sourceTree = "<group>"; };
 		B3166952263A3D14000CFAD7 /* TWMCustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWMCustomButton.swift; sourceTree = "<group>"; };
 		B3166954263A3D38000CFAD7 /* TWMStyleTransferController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWMStyleTransferController.swift; sourceTree = "<group>"; };
 		B3166956263A3D76000CFAD7 /* StarryStyle.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = StarryStyle.mlmodel; sourceTree = "<group>"; };
 		B3166959263A4F2C000CFAD7 /* TWMGestureRecognitionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWMGestureRecognitionController.swift; sourceTree = "<group>"; };
 		B316695B263A4F70000CFAD7 /* example_5s0_hand_model.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = example_5s0_hand_model.mlmodel; sourceTree = "<group>"; };
+		B355A0EF263C42FF00240919 /* ZLPhotoBrowser.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZLPhotoBrowser.xcodeproj; path = "../../../../../Documents/毕设/毕设工程/ZLPhotoBrowser-master/ZLPhotoBrowser.xcodeproj"; sourceTree = "<group>"; };
+		B355A104263E3D9A00240919 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B355A106263E3DA700240919 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		B355A109263E3DD800240919 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		B355A10B263E3DE300240919 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		B355A10D263E3DEE00240919 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B355A10F263E3DF900240919 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		B355A111263E3E0200240919 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B355A129263E877300240919 /* Wechat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Wechat-Bridging-Header.h"; sourceTree = "<group>"; };
+		B3677A56263FB390005CAF3E /* UIAlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertExtension.swift; sourceTree = "<group>"; };
 		B3C4BC4C263B991800357B75 /* TWMVisionDetectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWMVisionDetectionController.swift; sourceTree = "<group>"; };
 		B3C4BC4E263B996500357B75 /* TWMVisionDetectionPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWMVisionDetectionPreviewView.swift; sourceTree = "<group>"; };
 		B3C4BC50263B99A900357B75 /* TWMVisionDetectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWMVisionDetectionExtensions.swift; sourceTree = "<group>"; };
 		B3C4BC52263BD8D900357B75 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B3C4BC55263C29F600357B75 /* TWMMineController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWMMineController.swift; sourceTree = "<group>"; };
+		B3CC97E826422FFF005125A2 /* OpenShare+Weibo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OpenShare+Weibo.m"; sourceTree = "<group>"; };
+		B3CC97E926422FFF005125A2 /* OpenShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenShare.m; sourceTree = "<group>"; };
+		B3CC97EA26422FFF005125A2 /* OpenShare+Renren.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OpenShare+Renren.h"; sourceTree = "<group>"; };
+		B3CC97EB26422FFF005125A2 /* OpenShare+QQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OpenShare+QQ.m"; sourceTree = "<group>"; };
+		B3CC97EC26422FFF005125A2 /* OpenShare+Alipay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OpenShare+Alipay.m"; sourceTree = "<group>"; };
+		B3CC97ED26422FFF005125A2 /* OpenShare+Weixin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OpenShare+Weixin.m"; sourceTree = "<group>"; };
+		B3CC97EE26422FFF005125A2 /* OpenShareHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenShareHeader.h; sourceTree = "<group>"; };
+		B3CC97EF26422FFF005125A2 /* OpenShare+Weibo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OpenShare+Weibo.h"; sourceTree = "<group>"; };
+		B3CC97F026422FFF005125A2 /* OpenShare+Renren.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OpenShare+Renren.m"; sourceTree = "<group>"; };
+		B3CC97F126422FFF005125A2 /* OpenShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenShare.h; sourceTree = "<group>"; };
+		B3CC97F226422FFF005125A2 /* OpenShare+QQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OpenShare+QQ.h"; sourceTree = "<group>"; };
+		B3CC97F326422FFF005125A2 /* OpenShare+Weixin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OpenShare+Weixin.h"; sourceTree = "<group>"; };
+		B3CC97F426422FFF005125A2 /* OpenShare+Alipay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OpenShare+Alipay.h"; sourceTree = "<group>"; };
+		B3CC97FD26424898005125A2 /* Extension+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIImage.swift"; sourceTree = "<group>"; };
+		B3CC980126428D29005125A2 /* ImageProcessing.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ImageProcessing.entitlements; sourceTree = "<group>"; };
+		B3CC980226428EE0005125A2 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
+		B3CC98062642C75B005125A2 /* UIImage+CoreML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+CoreML.swift"; sourceTree = "<group>"; };
+		B3CC98082642C785005125A2 /* TWMNSTError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWMNSTError.swift; sourceTree = "<group>"; };
+		B3CC980A2642C7B4005125A2 /* TWMMLModelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWMMLModelProvider.swift; sourceTree = "<group>"; };
+		B3CC980C2642C869005125A2 /* Pointillism.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Pointillism.mlmodel; sourceTree = "<group>"; };
+		B3CC980E2642C86F005125A2 /* StarryNight.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = StarryNight.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,19 +215,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B30D829B26393761000FDDA5 /* ZLPhotoBrowser.framework in Frameworks */,
+				B3CC97E42641753A005125A2 /* ZLPhotoBrowser.framework in Frameworks */,
+				B355A112263E3E0200240919 /* CFNetwork.framework in Frameworks */,
+				B355A110263E3DF900240919 /* CoreTelephony.framework in Frameworks */,
+				B355A10E263E3DEE00240919 /* Security.framework in Frameworks */,
+				B3CC980326428EE0005125A2 /* AuthenticationServices.framework in Frameworks */,
+				B355A10C263E3DE300240919 /* libc++.tbd in Frameworks */,
+				B355A10A263E3DD800240919 /* libsqlite3.tbd in Frameworks */,
+				B355A108263E3DD200240919 /* libz.tbd in Frameworks */,
+				B355A105263E3D9A00240919 /* SystemConfiguration.framework in Frameworks */,
+				B355A0F5263C430800240919 /* ZLPhotoBrowser.framework in Frameworks */,
+				B10CFA20959FFC0F3256F03A /* Pods_ImageProcessing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C7CC60FCE4A81B2E1205A7D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0E0EC1ABB659009E92A5871F /* Pods-ImageProcessing.debug.xcconfig */,
+				5C9C6FA3355FA1AEFC169093 /* Pods-ImageProcessing.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B30D8157263800E8000FDDA5 = {
 			isa = PBXGroup;
 			children = (
 				B30D8162263800E8000FDDA5 /* ImageProcessing */,
 				B30D8161263800E8000FDDA5 /* Products */,
 				B30D829926393761000FDDA5 /* Frameworks */,
+				8C7CC60FCE4A81B2E1205A7D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,11 +262,12 @@
 		B30D8162263800E8000FDDA5 /* ImageProcessing */ = {
 			isa = PBXGroup;
 			children = (
+				B3CC980126428D29005125A2 /* ImageProcessing.entitlements */,
+				B3C4BC54263C29E000357B75 /* TWMMine */,
 				B3C4BC4A263B98ED00357B75 /* TWMVisionDetection */,
 				B3166958263A4F13000CFAD7 /* TWMGestureRecognition */,
 				B3166950263A3CA9000CFAD7 /* TWMStyleTransfer */,
 				B316694626395FB5000CFAD7 /* TWMSavePhoto */,
-				B316694526395D83000CFAD7 /* TWMEditPhoto */,
 				B30D829E263937EC000FDDA5 /* SnapKit */,
 				B30D81BA2638F5D4000FDDA5 /* TWMShowPhoto */,
 				B30D81B92638F5BC000FDDA5 /* TWMPickerPhoto */,
@@ -204,9 +283,9 @@
 		B30D81B92638F5BC000FDDA5 /* TWMPickerPhoto */ = {
 			isa = PBXGroup;
 			children = (
+				B355A0EF263C42FF00240919 /* ZLPhotoBrowser.xcodeproj */,
 				B30D81B62638EC36000FDDA5 /* TWMPickerPhotoController.swift */,
 				B316694226395B19000CFAD7 /* TWMImageStickerContainerView.swift */,
-				B30D82902639144D000FDDA5 /* ZLPhotoBrowser.xcodeproj */,
 			);
 			path = TWMPickerPhoto;
 			sourceTree = "<group>";
@@ -216,21 +295,23 @@
 			children = (
 				B30D818626382CC2000FDDA5 /* TWMShowPhotoController.swift */,
 				B30D81B326384820000FDDA5 /* TWMShowPhotoCollectionViewCell.swift */,
+				B3677A56263FB390005CAF3E /* UIAlertExtension.swift */,
 			);
 			path = TWMShowPhoto;
-			sourceTree = "<group>";
-		};
-		B30D82912639144D000FDDA5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B30D82952639144D000FDDA5 /* ZLPhotoBrowser.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		B30D829926393761000FDDA5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B3CC980226428EE0005125A2 /* AuthenticationServices.framework */,
+				B355A111263E3E0200240919 /* CFNetwork.framework */,
+				B355A10F263E3DF900240919 /* CoreTelephony.framework */,
+				B355A10D263E3DEE00240919 /* Security.framework */,
+				B355A10B263E3DE300240919 /* libc++.tbd */,
+				B355A109263E3DD800240919 /* libsqlite3.tbd */,
+				B355A106263E3DA700240919 /* libz.tbd */,
+				B355A104263E3D9A00240919 /* SystemConfiguration.framework */,
+				26395250FFBB6D7F85D59D6D /* Pods_ImageProcessing.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -280,14 +361,6 @@
 			path = SnapKit;
 			sourceTree = "<group>";
 		};
-		B316694526395D83000CFAD7 /* TWMEditPhoto */ = {
-			isa = PBXGroup;
-			children = (
-				B3166949263964B0000CFAD7 /* TWMEditPhotoController.swift */,
-			);
-			path = TWMEditPhoto;
-			sourceTree = "<group>";
-		};
 		B316694626395FB5000CFAD7 /* TWMSavePhoto */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,6 +372,11 @@
 		B3166950263A3CA9000CFAD7 /* TWMStyleTransfer */ = {
 			isa = PBXGroup;
 			children = (
+				B3CC98062642C75B005125A2 /* UIImage+CoreML.swift */,
+				B3CC98082642C785005125A2 /* TWMNSTError.swift */,
+				B3CC980A2642C7B4005125A2 /* TWMMLModelProvider.swift */,
+				B3CC980C2642C869005125A2 /* Pointillism.mlmodel */,
+				B3CC980E2642C86F005125A2 /* StarryNight.mlmodel */,
 				B3166956263A3D76000CFAD7 /* StarryStyle.mlmodel */,
 				B3166952263A3D14000CFAD7 /* TWMCustomButton.swift */,
 				B3166954263A3D38000CFAD7 /* TWMStyleTransferController.swift */,
@@ -315,6 +393,14 @@
 			path = TWMGestureRecognition;
 			sourceTree = "<group>";
 		};
+		B355A0F0263C42FF00240919 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B355A0F4263C42FF00240919 /* ZLPhotoBrowser.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		B3C4BC4A263B98ED00357B75 /* TWMVisionDetection */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +411,37 @@
 			path = TWMVisionDetection;
 			sourceTree = "<group>";
 		};
+		B3C4BC54263C29E000357B75 /* TWMMine */ = {
+			isa = PBXGroup;
+			children = (
+				B3C4BC55263C29F600357B75 /* TWMMineController.swift */,
+				B355A129263E877300240919 /* Wechat-Bridging-Header.h */,
+				B3CC97FD26424898005125A2 /* Extension+UIImage.swift */,
+				B3CC97E726422FFF005125A2 /* openshare */,
+			);
+			path = TWMMine;
+			sourceTree = "<group>";
+		};
+		B3CC97E726422FFF005125A2 /* openshare */ = {
+			isa = PBXGroup;
+			children = (
+				B3CC97F126422FFF005125A2 /* OpenShare.h */,
+				B3CC97E926422FFF005125A2 /* OpenShare.m */,
+				B3CC97F426422FFF005125A2 /* OpenShare+Alipay.h */,
+				B3CC97EC26422FFF005125A2 /* OpenShare+Alipay.m */,
+				B3CC97F226422FFF005125A2 /* OpenShare+QQ.h */,
+				B3CC97EB26422FFF005125A2 /* OpenShare+QQ.m */,
+				B3CC97EA26422FFF005125A2 /* OpenShare+Renren.h */,
+				B3CC97F026422FFF005125A2 /* OpenShare+Renren.m */,
+				B3CC97EF26422FFF005125A2 /* OpenShare+Weibo.h */,
+				B3CC97E826422FFF005125A2 /* OpenShare+Weibo.m */,
+				B3CC97F326422FFF005125A2 /* OpenShare+Weixin.h */,
+				B3CC97ED26422FFF005125A2 /* OpenShare+Weixin.m */,
+				B3CC97EE26422FFF005125A2 /* OpenShareHeader.h */,
+			);
+			path = openshare;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -332,10 +449,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B30D8174263800E9000FDDA5 /* Build configuration list for PBXNativeTarget "ImageProcessing" */;
 			buildPhases = (
+				74D7396ADABC81BDFBCEE820 /* [CP] Check Pods Manifest.lock */,
 				B30D815C263800E8000FDDA5 /* Sources */,
 				B30D815D263800E8000FDDA5 /* Frameworks */,
 				B30D815E263800E8000FDDA5 /* Resources */,
-				B30D829D26393761000FDDA5 /* Embed Frameworks */,
+				B355A0F7263C430800240919 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -373,8 +491,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = B30D82912639144D000FDDA5 /* Products */;
-					ProjectRef = B30D82902639144D000FDDA5 /* ZLPhotoBrowser.xcodeproj */;
+					ProductGroup = B355A0F0263C42FF00240919 /* Products */;
+					ProjectRef = B355A0EF263C42FF00240919 /* ZLPhotoBrowser.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -385,11 +503,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		B30D82952639144D000FDDA5 /* ZLPhotoBrowser.framework */ = {
+		B355A0F4263C42FF00240919 /* ZLPhotoBrowser.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ZLPhotoBrowser.framework;
-			remoteRef = B30D82942639144D000FDDA5 /* PBXContainerItemProxy */;
+			remoteRef = B355A0F3263C42FF00240919 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -407,25 +525,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		74D7396ADABC81BDFBCEE820 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ImageProcessing-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B30D815C263800E8000FDDA5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3CC980B2642C7B4005125A2 /* TWMMLModelProvider.swift in Sources */,
 				B30D82D3263937EC000FDDA5 /* ConstraintMakerRelatable+Extensions.swift in Sources */,
 				B30D82E9263937EC000FDDA5 /* ConstraintMakerRelatable.swift in Sources */,
 				B3C4BC4F263B996500357B75 /* TWMVisionDetectionPreviewView.swift in Sources */,
 				B30D82D6263937EC000FDDA5 /* ConstraintView.swift in Sources */,
 				B30D82E2263937EC000FDDA5 /* Constraint.swift in Sources */,
 				B30D82DD263937EC000FDDA5 /* ConstraintMaker.swift in Sources */,
+				B3CC97F726422FFF005125A2 /* OpenShare+QQ.m in Sources */,
 				B30D82E8263937EC000FDDA5 /* ConstraintLayoutSupportDSL.swift in Sources */,
+				B3C4BC56263C29F600357B75 /* TWMMineController.swift in Sources */,
 				B30D82D9263937EC000FDDA5 /* Typealiases.swift in Sources */,
 				B30D82CC263937EC000FDDA5 /* ConstraintInsets.swift in Sources */,
+				B3CC97FA26422FFF005125A2 /* OpenShare+Renren.m in Sources */,
 				B30D82C9263937EC000FDDA5 /* ConstraintAttributes.swift in Sources */,
 				B30D82CA263937EC000FDDA5 /* ConstraintViewDSL.swift in Sources */,
 				B30D82C8263937EC000FDDA5 /* ConstraintMakerPriortizable.swift in Sources */,
 				B316695C263A4F70000CFAD7 /* example_5s0_hand_model.mlmodel in Sources */,
 				B30D82DC263937EC000FDDA5 /* ConstraintMakerEditable.swift in Sources */,
+				B3CC980F2642C86F005125A2 /* StarryNight.mlmodel in Sources */,
 				B316695A263A4F2C000CFAD7 /* TWMGestureRecognitionController.swift in Sources */,
 				B30D818726382CC2000FDDA5 /* TWMShowPhotoController.swift in Sources */,
 				B30D81B72638EC36000FDDA5 /* TWMPickerPhotoController.swift in Sources */,
@@ -438,14 +586,15 @@
 				B30D8164263800E8000FDDA5 /* AppDelegate.swift in Sources */,
 				B30D82CF263937EC000FDDA5 /* ConstraintMakerExtendable.swift in Sources */,
 				B30D81B426384820000FDDA5 /* TWMShowPhotoCollectionViewCell.swift in Sources */,
+				B3CC98072642C75B005125A2 /* UIImage+CoreML.swift in Sources */,
 				B30D82DE263937EC000FDDA5 /* ConstraintRelation.swift in Sources */,
 				B30D82D0263937EC000FDDA5 /* ConstraintPriority.swift in Sources */,
-				B316694A263964B0000CFAD7 /* TWMEditPhotoController.swift in Sources */,
 				B3166948263960DE000CFAD7 /* TWMSavePhotoMethod.swift in Sources */,
 				B30D82C5263937EC000FDDA5 /* ConstraintMultiplierTarget.swift in Sources */,
 				B30D82C7263937EC000FDDA5 /* ConstraintDescription.swift in Sources */,
 				B316694326395B19000CFAD7 /* TWMImageStickerContainerView.swift in Sources */,
 				B30D82E3263937EC000FDDA5 /* Debugging.swift in Sources */,
+				B3CC97F826422FFF005125A2 /* OpenShare+Alipay.m in Sources */,
 				B30D82E0263937EC000FDDA5 /* ConstraintView+Extensions.swift in Sources */,
 				B30D82D1263937EC000FDDA5 /* ConstraintInsetTarget.swift in Sources */,
 				B30D82D8263937EC000FDDA5 /* ConstraintLayoutSupport.swift in Sources */,
@@ -455,15 +604,22 @@
 				B3166953263A3D14000CFAD7 /* TWMCustomButton.swift in Sources */,
 				B30D82E1263937EC000FDDA5 /* ConstraintItem.swift in Sources */,
 				B30D82E6263937EC000FDDA5 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
+				B3677A57263FB390005CAF3E /* UIAlertExtension.swift in Sources */,
 				B30D82D7263937EC000FDDA5 /* ConstraintLayoutGuide.swift in Sources */,
+				B3CC97F926422FFF005125A2 /* OpenShare+Weixin.m in Sources */,
 				B3C4BC51263B99A900357B75 /* TWMVisionDetectionExtensions.swift in Sources */,
 				B30D82D4263937EC000FDDA5 /* ConstraintConfig.swift in Sources */,
 				B30D82E5263937EC000FDDA5 /* LayoutConstraint.swift in Sources */,
 				B30D82CE263937EC000FDDA5 /* ConstraintDSL.swift in Sources */,
+				B3CC98092642C785005125A2 /* TWMNSTError.swift in Sources */,
 				B30D82DA263937EC000FDDA5 /* ConstraintConstantTarget.swift in Sources */,
+				B3CC97FE26424898005125A2 /* Extension+UIImage.swift in Sources */,
+				B3CC97F626422FFF005125A2 /* OpenShare.m in Sources */,
 				B30D82D2263937EC000FDDA5 /* ConstraintDirectionalInsetTarget.swift in Sources */,
 				B30D82E4263937EC000FDDA5 /* ConstraintRelatableTarget.swift in Sources */,
 				B30D82CD263937EC000FDDA5 /* ConstraintMakerFinalizable.swift in Sources */,
+				B3CC97F526422FFF005125A2 /* OpenShare+Weibo.m in Sources */,
+				B3CC980D2642C869005125A2 /* Pointillism.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,39 +755,67 @@
 		};
 		B30D8175263800E9000FDDA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E0EC1ABB659009E92A5871F /* Pods-ImageProcessing.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ImageProcessing/ImageProcessing.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KVY9QC9HZ9;
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ImageProcessing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tanwenmeng.ImageProcessing.ImageProcessing;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ImageProcessing/TWMMine/OpenSDK1.8.9",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tanwenmeng.ImageProcessing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ImageProcessing/TWMMine/Wechat-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = (
+					"{PODS_ROOT}",
+					recursive,
+				);
 			};
 			name = Debug;
 		};
 		B30D8176263800E9000FDDA5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C9C6FA3355FA1AEFC169093 /* Pods-ImageProcessing.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ImageProcessing/ImageProcessing.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KVY9QC9HZ9;
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ImageProcessing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tanwenmeng.ImageProcessing.ImageProcessing;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ImageProcessing/TWMMine/OpenSDK1.8.9",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tanwenmeng.ImageProcessing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/ImageProcessing/TWMMine/Wechat-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = (
+					"{PODS_ROOT}",
+					recursive,
+				);
 			};
 			name = Release;
 		};

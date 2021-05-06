@@ -9,6 +9,7 @@ import UIKit
 import Photos
 import ZLPhotoBrowser
 
+
 class TWMShowPhotoController: UIViewController {
 
     var collectionView: UICollectionView!
@@ -54,12 +55,171 @@ class TWMShowPhotoController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.backgroundColor = .white
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(longPressGesture(_:)))
+        collectionView.addGestureRecognizer(longPress)
+        
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints { (make) in
             make.edges.equalTo(self.view)
         }
         collectionView.register(TWMShowPhotoCollectionViewCell.self, forCellWithReuseIdentifier: "TWMShowPhotoCollectionViewCell")
     }
+    
+    //MARK: - 长按动作
+    @objc func longPressGesture(_ tap: UILongPressGestureRecognizer) {
+
+//        let msg:OSMessage = OSMessage.init()
+//        msg.title = "Hello World"
+//        let image: UIImage = UIImage.init(named: "image1")!
+//        let imageData = image.compressImage(image: image, maxLength: 32*1024)
+//        let imageChange = UIImage.init(data: imageData! as Data)
+//        msg.image = imageChange
+//        msg.thumbnail = imageChange
+//        OpenShare.share(toWeixinSession: msg, success: {_ in
+//            UIAlertController.showAlert(message: "微信分享到会话成功")
+//        }, fail: {_,_  in
+//            UIAlertController.showAlert(message: "微信分享到会话失败")
+//        })
+//
+//        OpenShare.share(toQQZone: msg, success: nil, fail: nil)
+//
+//        OpenShare.weixinAuth("snsapi_userinfo", success: {_ in
+//            UIAlertController.showAlert(message: "微信登录成功")
+//        }, fail: {_,_  in
+//            UIAlertController.showAlert(message: "微信登录失败")
+//        })
+
+
+        let point = tap.location(in: collectionView)
+        let alertController = UIAlertController(title: "保存或删除数据", message: "删除数据将不可恢复",
+                                                preferredStyle: .actionSheet)
+        let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+        let deleteAction = UIAlertAction(title: "删除", style: .destructive, handler: { action in
+            self.deletePhotoToAlbum(point: point)
+        })
+        let archiveAction = UIAlertAction(title: "保存", style: .default, handler:  { action in
+            self.savePhotoToAlbum(point: point)
+        })
+        let sharreAction = UIAlertAction(title: "分享", style: .default, handler:  { action in
+            self.sharePhoto(point: point)
+        })
+        alertController.addAction(cancelAction)
+        alertController.addAction(deleteAction)
+        alertController.addAction(archiveAction)
+        alertController.addAction(sharreAction)
+        self.present(alertController, animated: true, completion: nil)
+        
+    }
+    
+    func sharePhoto(point: CGPoint) {
+        var indexPath: IndexPath?
+        indexPath = collectionView.indexPathForItem(at: point)
+        if indexPath == nil || (indexPath?.section)! > 0 || indexPath?.item == 0 {
+            return
+        }
+        let item = collectionView.cellForItem(at: indexPath!) as? TWMShowPhotoCollectionViewCell
+        
+        // 分享图片
+        let image: UIImage = (item?.imageView.image)!
+        let msg:OSMessage = OSMessage.init()
+        msg.title = "Hello World"
+//        let image: UIImage = UIImage.init(named: "image1")!
+        let imageData = image.compressImage(image: image, maxLength: 32*1024)
+        let imageChange = UIImage.init(data: imageData! as Data)
+        msg.image = imageChange
+        msg.thumbnail = imageChange
+        
+        let alertController = UIAlertController(title: "分享照片", message: "分享选中的照片",
+                                                preferredStyle: .actionSheet)
+        let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+        let weixinSessionAction = UIAlertAction(title: "微信好友👸🏻", style: .default, handler: { action in
+            OpenShare.share(toWeixinSession: msg, success: {_ in
+                UIAlertController.showAlert(message: "微信分享到会话成功")
+            }, fail: {_,_  in
+                UIAlertController.showAlert(message: "微信分享到会话失败")
+            })
+        })
+        
+        let weixinTimelineAction = UIAlertAction(title: "微信朋友圈", style: .default, handler: { action in
+            OpenShare.share(toWeixinTimeline: msg, success: {_ in
+                UIAlertController.showAlert(message: "微信分享到朋友圈成功")
+            }, fail: {_,_  in
+                UIAlertController.showAlert(message: "微信分享到朋友圈失败")
+            })
+        })
+        
+        
+        let weixinFavoriteAction = UIAlertAction(title: "微信收藏", style: .default, handler: { action in
+            OpenShare.share(toWeixinFavorite: msg, success: {_ in
+                UIAlertController.showAlert(message: "微信收藏成功")
+            }, fail: {_,_  in
+                UIAlertController.showAlert(message: "微信收藏失败")
+            })
+        })
+        
+        let qqFriendsAction = UIAlertAction(title: "QQ好友", style: .default, handler:  { action in
+            msg.desc = "这是一张图片"
+            OpenShare.share(toQQFriends: msg, success: {_ in
+                UIAlertController.showAlert(message: "分享到QQ好友成功")
+            }, fail: {_,_  in
+                UIAlertController.showAlert(message: "分享到QQ好友失败")
+            })
+        })
+        
+        let qqZoneAction = UIAlertAction(title: "微博", style: .default, handler:  { action in
+            OpenShare.share(toWeibo: msg, success: {_ in
+                UIAlertController.showAlert(message: "分享到微博成功")
+            }, fail: {_,_  in
+                UIAlertController.showAlert(message: "分享到微博失败")
+            })
+        })
+        alertController.addAction(cancelAction)
+        alertController.addAction(weixinSessionAction)
+        alertController.addAction(weixinTimelineAction)
+        alertController.addAction(weixinFavoriteAction)
+        alertController.addAction(qqFriendsAction)
+        alertController.addAction(qqZoneAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+     
+        
+    func savePhotoToAlbum(point: CGPoint) {
+        var indexPath: IndexPath?
+        indexPath = collectionView.indexPathForItem(at: point)
+        if indexPath == nil || (indexPath?.section)! > 0 || indexPath?.item == 0 {
+            return
+        }
+        let item = collectionView.cellForItem(at: indexPath!) as? TWMShowPhotoCollectionViewCell
+        
+        // 保存到相册
+        let hud = ZLProgressHUD(style: ZLPhotoConfiguration.default().hudStyle)
+        let image = item?.imageView.image
+        hud.show()
+        ZLPhotoManager.saveImageToAlbum(image: image!) { [weak self] (suc, asset) in
+            if suc, let at = asset {
+                debugPrint("保存图片到相册成功")
+            } else {
+                debugPrint("保存图片到相册失败")
+            }
+            hud.hide()
+        }
+    }
+    
+    func deletePhotoToAlbum(point: CGPoint) {
+        var indexPath: IndexPath?
+        indexPath = collectionView.indexPathForItem(at: point)
+        if indexPath == nil || (indexPath?.section)! > 0 || indexPath?.item == 0 {
+            return
+        }
+        let item = collectionView.cellForItem(at: indexPath!) as? TWMShowPhotoCollectionViewCell
+        
+        // 更新数据
+        self.images.remove(at: indexPath!.item)
+        collectionView.moveItem(at: indexPath!, to: NSIndexPath(item: self.images.count, section: 0) as IndexPath)
+        savePhotos()
+    }
+ 
     
     func selectPhotos() {
         let config = ZLPhotoConfiguration.default()
@@ -147,6 +307,13 @@ extension TWMShowPhotoController: UICollectionViewDataSource, UICollectionViewDe
             print("图像添加完成")
         } else {
             // 点击进入编辑页面
+            let image = self.images[indexPath.row]
+            ZLEditImageViewController.showEditImageVC(parentVC: self, image: image) { [weak self] (ei, _) in
+                self?.images[indexPath.row] = ei
+                self?.collectionView .reloadData()
+                self?.savePhotos()
+            }
+            
         }
     }
     
