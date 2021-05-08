@@ -11,7 +11,7 @@ import UIKit
 class UserCenterSegmentedView: UIView {
     
     // MARK: Properties
-    
+
     /// 按钮点击事件回调
     var didTappedButtonHandler: ((_ button: UIButton, _ index: Int) -> Void)?
     
