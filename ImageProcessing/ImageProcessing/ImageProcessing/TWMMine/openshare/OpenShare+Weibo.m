@@ -2,9 +2,7 @@
 //  OpenShare+Weibo.m
 //  openshare
 //
-//  Created by LiuLogan on 15/5/18.
-//  Copyright (c) 2015年 OpenShare <http://openshare.gfzj.us/>. All rights reserved.
-//
+//  Created by StuTan on 2021/4/30.
 
 #import "OpenShare+Weibo.h"
 

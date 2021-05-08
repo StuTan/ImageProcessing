@@ -68,28 +68,6 @@ class TWMShowPhotoController: UIViewController {
     //MARK: - 长按动作
     @objc func longPressGesture(_ tap: UILongPressGestureRecognizer) {
 
-//        let msg:OSMessage = OSMessage.init()
-//        msg.title = "Hello World"
-//        let image: UIImage = UIImage.init(named: "image1")!
-//        let imageData = image.compressImage(image: image, maxLength: 32*1024)
-//        let imageChange = UIImage.init(data: imageData! as Data)
-//        msg.image = imageChange
-//        msg.thumbnail = imageChange
-//        OpenShare.share(toWeixinSession: msg, success: {_ in
-//            UIAlertController.showAlert(message: "微信分享到会话成功")
-//        }, fail: {_,_  in
-//            UIAlertController.showAlert(message: "微信分享到会话失败")
-//        })
-//
-//        OpenShare.share(toQQZone: msg, success: nil, fail: nil)
-//
-//        OpenShare.weixinAuth("snsapi_userinfo", success: {_ in
-//            UIAlertController.showAlert(message: "微信登录成功")
-//        }, fail: {_,_  in
-//            UIAlertController.showAlert(message: "微信登录失败")
-//        })
-
-
         let point = tap.location(in: collectionView)
         let alertController = UIAlertController(title: "保存或删除数据", message: "删除数据将不可恢复",
                                                 preferredStyle: .actionSheet)
@@ -291,7 +269,6 @@ extension TWMShowPhotoController: UICollectionViewDataSource, UICollectionViewDe
         
         if indexPath.row < images.count {
             cell.imageView.image = images[indexPath.row]
-//            cell.playImageView.isHidden = assets[indexPath.row].mediaType != .video
         } else {
             cell.imageView.image = UIImage(named: "addPhoto")
             cell.playImageView.isHidden = true
