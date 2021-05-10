@@ -177,6 +177,7 @@ class TWMShowPhotoController: UIViewController {
         ZLPhotoManager.saveImageToAlbum(image: image!) { [weak self] (suc, asset) in
             if suc, let at = asset {
                 debugPrint("保存图片到相册成功")
+                UIAlertController.showAlert(message: "保存成功!")
             } else {
                 debugPrint("保存图片到相册失败")
             }

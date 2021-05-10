@@ -2,7 +2,7 @@
  use_frameworks!
 
 target 'ImageProcessing' do  
-  
+  pod 'CLToast'
 
      
 end

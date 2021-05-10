@@ -60,7 +60,7 @@
 		B316695C263A4F70000CFAD7 /* example_5s0_hand_model.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B316695B263A4F70000CFAD7 /* example_5s0_hand_model.mlmodel */; };
 		B355A0F5263C430800240919 /* ZLPhotoBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B355A0F4263C42FF00240919 /* ZLPhotoBrowser.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		B355A0F6263C430800240919 /* ZLPhotoBrowser.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B355A0F4263C42FF00240919 /* ZLPhotoBrowser.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B355A0F9263C433000240919 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B355A0F9263C433000240919 /* BuildFile in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B355A105263E3D9A00240919 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B355A104263E3D9A00240919 /* SystemConfiguration.framework */; };
 		B355A108263E3DD200240919 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B355A106263E3DA700240919 /* libz.tbd */; };
 		B355A10A263E3DD800240919 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B355A109263E3DD800240919 /* libsqlite3.tbd */; };
@@ -114,7 +114,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				B355A0F6263C430800240919 /* ZLPhotoBrowser.framework in Embed Frameworks */,
-				B355A0F9263C433000240919 /* (null) in Embed Frameworks */,
+				B355A0F9263C433000240919 /* BuildFile in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,6 +480,7 @@
 				B30D815D263800E8000FDDA5 /* Frameworks */,
 				B30D815E263800E8000FDDA5 /* Resources */,
 				B355A0F7263C430800240919 /* Embed Frameworks */,
+				27F6BBAFD392125F8742209E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -552,6 +553,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		27F6BBAFD392125F8742209E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImageProcessing/Pods-ImageProcessing-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ImageProcessing/Pods-ImageProcessing-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ImageProcessing/Pods-ImageProcessing-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		74D7396ADABC81BDFBCEE820 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
