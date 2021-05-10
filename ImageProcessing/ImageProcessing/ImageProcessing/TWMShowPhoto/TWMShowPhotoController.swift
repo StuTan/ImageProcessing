@@ -285,7 +285,7 @@ extension TWMShowPhotoController: UICollectionViewDataSource, UICollectionViewDe
             print("图像添加完成")
         } else {
             // 点击进入编辑页面
-            let image = self.images[indexPath.row]
+            let image = self.images[indexPath.row] 
             ZLEditImageViewController.showEditImageVC(parentVC: self, image: image) { [weak self] (ei, _) in
                 self?.images[indexPath.row] = ei
                 self?.collectionView .reloadData()
