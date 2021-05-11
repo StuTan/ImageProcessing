@@ -212,7 +212,7 @@ class TWMStyleTransferController: UIViewController, UINavigationControllerDelega
         config.imageStickerContainerView = TWMImageStickerContainerView()
         config.allowSelectImage = true
         config.maxSelectCount = 1
-        config.allowEditImage = false
+        config.allowEditImage = true
         
         
         // You can first determine whether the asset is allowed to be selected.
