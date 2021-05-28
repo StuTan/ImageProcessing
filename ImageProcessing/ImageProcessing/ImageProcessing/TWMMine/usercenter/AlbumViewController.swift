@@ -87,19 +87,12 @@ extension AlbumViewController: UICollectionViewDataSource, UICollectionViewDeleg
         
         if indexPath.row < images.count {
             cell.imageView.image = images[indexPath.row]
-//            cell.playImageView.isHidden = assets[indexPath.row].mediaType != .video
         } else {
             cell.imageView.image = UIImage(named: "addPhoto")
             cell.playImageView.isHidden = true
         }
         
         return cell
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-//        let r = CGFloat(arc4random_uniform(256)) / 255.0
-//        let g = CGFloat(arc4random_uniform(256)) / 255.0
-//        let b = CGFloat(arc4random_uniform(256)) / 255.0
-//        cell.backgroundColor = UIColor(red: r, green: g, blue: b, alpha: 1.0)
-//        return cell
     }
     
 }
@@ -113,20 +106,4 @@ extension AlbumViewController: UICollectionViewDelegate {
     }
     
 }
-
-
-//extension AlbumViewController: UICollectionViewDelegateFlowLayout {
-//    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let width = (collectionView.bounds.width - 10.0) / 3.0
-//        return CGSize(width: width, height: width)
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return 5.0
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//        return 5.0
-//    }
-//}
+ 

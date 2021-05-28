@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -60,7 +60,7 @@
 		B316695C263A4F70000CFAD7 /* example_5s0_hand_model.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B316695B263A4F70000CFAD7 /* example_5s0_hand_model.mlmodel */; };
 		B355A0F5263C430800240919 /* ZLPhotoBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B355A0F4263C42FF00240919 /* ZLPhotoBrowser.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		B355A0F6263C430800240919 /* ZLPhotoBrowser.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B355A0F4263C42FF00240919 /* ZLPhotoBrowser.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B355A0F9263C433000240919 /* BuildFile in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B355A0F9263C433000240919 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B355A105263E3D9A00240919 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B355A104263E3D9A00240919 /* SystemConfiguration.framework */; };
 		B355A108263E3DD200240919 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B355A106263E3DA700240919 /* libz.tbd */; };
 		B355A10A263E3DD800240919 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B355A109263E3DD800240919 /* libsqlite3.tbd */; };
@@ -91,7 +91,6 @@
 		B3CC98132643774E005125A2 /* UserCenterContentProxyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC98122643774E005125A2 /* UserCenterContentProxyViewController.swift */; };
 		B3CC981526437771005125A2 /* UserCenterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC981426437771005125A2 /* UserCenterHeaderView.swift */; };
 		B3CC981726437794005125A2 /* UserCenterSegmentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC981626437794005125A2 /* UserCenterSegmentedView.swift */; };
-		B3CC981A264377E6005125A2 /* WeiboListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC9819264377E6005125A2 /* WeiboListViewController.swift */; };
 		B3CC981C264377FB005125A2 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC981B264377FB005125A2 /* AlbumViewController.swift */; };
 		B3CC981E2643794A005125A2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CC981D2643794A005125A2 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
@@ -114,7 +113,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				B355A0F6263C430800240919 /* ZLPhotoBrowser.framework in Embed Frameworks */,
-				B355A0F9263C433000240919 /* BuildFile in Embed Frameworks */,
+				B355A0F9263C433000240919 /* (null) in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,7 +216,6 @@
 		B3CC98122643774E005125A2 /* UserCenterContentProxyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterContentProxyViewController.swift; sourceTree = "<group>"; };
 		B3CC981426437771005125A2 /* UserCenterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterHeaderView.swift; sourceTree = "<group>"; };
 		B3CC981626437794005125A2 /* UserCenterSegmentedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCenterSegmentedView.swift; sourceTree = "<group>"; };
-		B3CC9819264377E6005125A2 /* WeiboListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiboListViewController.swift; sourceTree = "<group>"; };
 		B3CC981B264377FB005125A2 /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		B3CC981D2643794A005125A2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -461,7 +459,6 @@
 				B3CC98122643774E005125A2 /* UserCenterContentProxyViewController.swift */,
 				B3CC981426437771005125A2 /* UserCenterHeaderView.swift */,
 				B3CC981626437794005125A2 /* UserCenterSegmentedView.swift */,
-				B3CC9819264377E6005125A2 /* WeiboListViewController.swift */,
 				B3CC981B264377FB005125A2 /* AlbumViewController.swift */,
 				B3CC981D2643794A005125A2 /* HomeViewController.swift */,
 			);
@@ -627,7 +624,6 @@
 				B30D82E7263937EC000FDDA5 /* ConstraintDirectionalInsets.swift in Sources */,
 				B3166957263A3D76000CFAD7 /* StarryStyle.mlmodel in Sources */,
 				B30D82CB263937EC000FDDA5 /* ConstraintPriorityTarget.swift in Sources */,
-				B3CC981A264377E6005125A2 /* WeiboListViewController.swift in Sources */,
 				B30D82DB263937EC000FDDA5 /* ConstraintOffsetTarget.swift in Sources */,
 				B30D82DF263937EC000FDDA5 /* ConstraintLayoutGuideDSL.swift in Sources */,
 				B30D8164263800E8000FDDA5 /* AppDelegate.swift in Sources */,

@@ -3,4 +3,70 @@
    uuid = "4948C69D-DDF3-4CAB-95B2-E49B43ED6641"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A5243FF2-D09C-4FF4-8AEB-A60023A97849"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImageProcessing/TWMStyleTransfer/TWMStyleTransferController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
+            landmarkName = "showImagePicker(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B742B5A7-5B91-45F0-909B-4406485A2C4C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ImageProcessing/TWMStyleTransfer/TWMStyleTransferController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
+            landmarkName = "showImagePicker(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B742B5A7-5B91-45F0-909B-4406485A2C4C - 3d4b8f06095f0479"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ImageProcessing.TWMStyleTransferController.showImagePicker(Swift.Bool) -&gt; ()"
+                  moduleName = "ImageProcessing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stutan/ImageProcessing/ImageProcessing/ImageProcessing/ImageProcessing/TWMStyleTransfer/TWMStyleTransferController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "208"
+                  endingLineNumber = "208"
+                  offsetFromSymbolStart = "816">
+               </Location>
+               <Location
+                  uuid = "B742B5A7-5B91-45F0-909B-4406485A2C4C - 886265f066c9c797"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (Swift.Array&lt;__C.UIImage&gt;, Swift.Array&lt;__C.PHAsset&gt;, Swift.Bool) -&gt; () in ImageProcessing.TWMStyleTransferController.showImagePicker(Swift.Bool) -&gt; ()"
+                  moduleName = "ImageProcessing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/stutan/ImageProcessing/ImageProcessing/ImageProcessing/ImageProcessing/TWMStyleTransfer/TWMStyleTransferController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "208"
+                  endingLineNumber = "208"
+                  offsetFromSymbolStart = "112">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -31,7 +31,7 @@ class UserCenterSegmentedView: UIView {
     /// 活动指示器
     private let indicator: UIView = {
         let view = UIView()
-        view.backgroundColor = .orange
+        view.backgroundColor = .white
         return view
     }()
     
@@ -56,7 +56,7 @@ class UserCenterSegmentedView: UIView {
         separator.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         separator.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
         
-        indicator.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        indicator.centerXAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         indicator.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         indicator.heightAnchor.constraint(equalToConstant: 2.0).isActive = true
         indicator.widthAnchor.constraint(equalToConstant: 30.0).isActive = true

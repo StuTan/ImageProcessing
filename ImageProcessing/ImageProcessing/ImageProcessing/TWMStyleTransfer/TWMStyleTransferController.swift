@@ -19,7 +19,6 @@ class TWMStyleTransferController: UIViewController, UINavigationControllerDelega
     @IBOutlet weak var imageView: UIImageView!
     
     let imagePicker = UIImagePickerController()
-//    var takeSelectedAssetsSwitch: UISwitch!
     var selectedImages: [UIImage] = []
     var selectedAssets: [PHAsset] = []
     
@@ -43,9 +42,6 @@ class TWMStyleTransferController: UIViewController, UINavigationControllerDelega
 
     @IBAction func chooseImage(_ sender: Any) {
         // Choose Image Here
-//        imagePicker.allowsEditing = true
-//        imagePicker.sourceType = .photoLibrary
-//        present(imagePicker, animated: true, completion: nil)
         self.showImagePicker(true)
     }
     
@@ -69,30 +65,6 @@ class TWMStyleTransferController: UIViewController, UINavigationControllerDelega
     
     @IBAction func transformImage(_ sender: Any) {
         // Style Transfer Here
-        let model = StarryStyle()
-        
-        
-//        let styleArray = try? MLMultiArray(shape: [1] as [NSNumber], dataType: .double)
-//        styleArray?[0] = 1.0
-//
-//        if let image = pixelBuffer(from: imageView.image!) {
-//            do {
-//
-////                var error:NSError = NSError()
-////                let predictionOutput = try model.prediction(input1: image)
-////                imageOutputBufferRef = outPut.output1
-//
-//
-//                let predictionOutput = try model.prediction(image: image, index: styleArray!)
-//
-//                let ciImage = CIImage(cvPixelBuffer: predictionOutput.stylizedImage)
-//                let tempContext = CIContext(options: nil)
-//                let tempImage = tempContext.createCGImage(ciImage, from: CGRect(x: 0, y: 0, width: CVPixelBufferGetWidth(predictionOutput.stylizedImage), height: CVPixelBufferGetHeight(predictionOutput.stylizedImage)))
-//                imageView.image = UIImage(cgImage: tempImage!)
-//            } catch let error as NSError {
-//                print("CoreML Model Error: \(error)")
-//            }
-//        }
         
         guard let image = self.imageView.image else {
             print("Select an image first")
@@ -151,6 +123,7 @@ class TWMStyleTransferController: UIViewController, UINavigationControllerDelega
             }
         }
     }
+    
     //MARK:-  当风格发生变化的时候
     @IBAction func segmentedControlValueChanges(_ sender: Any) {
         self.selectedNSTModel = NSTDemoModel.allCases[self.segmentedControl.selectedSegmentIndex]
@@ -231,7 +204,7 @@ class TWMStyleTransferController: UIViewController, UINavigationControllerDelega
             }
         }
         
-        let ac = ZLPhotoPreviewSheet(selectedAssets: self.selectedAssets)
+        let ac = ZLPhotoPreviewSheet(selectedAssets: [])
         ac.selectImageBlock = { [weak self] (images, assets, isOriginal) in
             self?.selectedImages = images
             self?.selectedAssets = assets
